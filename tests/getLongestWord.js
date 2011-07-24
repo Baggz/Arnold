@@ -6,7 +6,7 @@ var Arnold = require('../src/arnold.js');
  */
 exports.getLongestWord = function(test) {
   
-  var output = Arnold.getLongestWord( ['lorem', 'ip', 'sum'] );
+  var output = Arnold.getLongestWord( ['pum', 'lorem', 'ip', 'sum'] );
   
   test.strictEqual( output, 'lorem' );
   

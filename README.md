@@ -12,8 +12,8 @@ $ npm install arnold
 
 Releases are available for download from GitHub.
 
-* [**Development** (8 KB uncompressed)](https://github.com/downloads/Baggz/Arnold/arnold.js)
-* [**Production** (1.27 KB compressed and gzipped)](https://github.com/downloads/Baggz/Arnold/arnold.min.js)
+* [**Development** (16 KB uncompressed)](https://github.com/downloads/Baggz/Arnold/arnold.js)
+* [**Production** (2.29 KB compressed and gzipped)](https://github.com/downloads/Baggz/Arnold/arnold.min.js)
 
 # Documentation
 

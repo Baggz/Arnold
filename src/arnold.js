@@ -622,6 +622,10 @@
   // Export
   if ( typeof module !== 'undefined' && module.exports ) {
     module.exports = new Arnold();
+  } else if ( typeof define !== 'undefined' ) {
+    define(function() {
+      return new Arnold();
+    });
   } else {
     this.Arnold = new Arnold();
   }

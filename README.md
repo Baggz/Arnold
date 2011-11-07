@@ -249,7 +249,7 @@ Arnold.words('Lorem ipsum dolor isamet pidet quidu delime.'); // => ['Lorem', 'i
 # Running Tests
 
 ```
-$ nodeunit tests/
+$ npm test
 ```
 
 # License

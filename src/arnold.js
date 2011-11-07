@@ -280,14 +280,14 @@
      */
     chop: function(input, step) {
 
-      if ( typeof step !== 'number' ) {
+      if (typeof step !== 'number') {
         return undefined;
       }
 
       var result = [];
-      for ( var i = 0, len = input.length; i < len; ) {
-        result.push( input.slice( i, i + step ) );
-        i = ( i + step );
+      for (var i = 0, len = input.length; i < len;) {
+        result.push(input.slice(i, i + step));
+        i = (i + step);
       }
       return result;
 
@@ -300,7 +300,7 @@
      * @param {string} separator
      */
     join: function(input, separator) {
-      return input.join( separator );
+      return input.join(separator);
     },
 
     /**
@@ -309,7 +309,7 @@
      * @param {string} input
      */
     reverse: function(input) {
-      return Array.prototype.reverse.call( input.split('') ).join('');
+      return Array.prototype.reverse.call(input.split('')).join('');
     },
 
     /**
@@ -318,7 +318,7 @@
      * @param {string} input
      */
     trim: function(input) {
-      return String.prototype.trim.call( input );
+      return String.prototype.trim.call(input);
     },
 
     /**
@@ -327,7 +327,7 @@
      * @param {string} input
      */
     ltrim: function(input) {
-      return String.prototype.trimLeft.call( input );
+      return String.prototype.trimLeft.call(input);
     },
 
     /**
@@ -336,7 +336,7 @@
      * @param {string} input
      */
     rtrim: function(input) {
-      return String.prototype.trimRight.call( input );
+      return String.prototype.trimRight.call(input);
     },
 
     /**
@@ -348,11 +348,11 @@
      */
     truncate: function(input, length, replacement) {
 
-      if ( typeof length !== 'number' ) {
+      if (typeof length !== 'number') {
         return undefined;
       }
 
-      return input.slice( 0, length ) + ( replacement || '...' );
+      return input.slice(0, length) + (replacement || '...');
 
     },
     
@@ -390,7 +390,7 @@
      * @param {string} substring
      */
     includes: function(input, substring) {
-      return input.indexOf( substring ) !== -1;
+      return input.indexOf(substring) !== -1;
     },
 
     /**
@@ -401,7 +401,7 @@
      */
     count: function(input, substring) {
 
-      if ( typeof substring !== 'string' ) {
+      if (typeof substring !== 'string') {
         return undefined;
       }
 
@@ -409,13 +409,13 @@
           index,
           sublen = substring.length;
 
-      for ( var i = 0, len = input.length; i < len; ) {
-        index = input.indexOf( substring, i );
-        if ( index === -1 ) {
+      for (var i = 0, len = input.length; i < len;) {
+        index = input.indexOf(substring, i);
+        if (index === -1) {
           break;
         }
         count++;
-        i = ( index + sublen );
+        i = (index + sublen);
       }
 
       return count;
@@ -464,7 +464,7 @@
      * @param {string} input
      */
     stripTags: function(input) {
-      return input.replace( /<\/?[^>]+>/ig, '' );
+      return input.replace(/<\/?[^>]+>/ig, '');
     },
 
     /**
@@ -474,7 +474,7 @@
      */
     getShortestWord: function(input) {
       return input.reduce(function(memo, word) {
-        return ( word.length < memo.length ) ? word : memo;
+        return (word.length < memo.length) ? word : memo;
       });
     },
 
@@ -485,7 +485,7 @@
      */
     getLongestWord: function(input, callback) {
       return input.reduce(function(memo, word) {
-        return ( word.length > memo.length ) ? word : memo;
+        return (word.length > memo.length) ? word : memo;
       });
     },
 
@@ -505,8 +505,8 @@
      */
     titleize: function(text) {
       var output = text.split(' ');
-      for ( var i = 0, len = output.length - 1; i <= len; i++ ) {
-        output[i] = this.capitalize( output[i] );
+      for (var i = 0, len = output.length - 1; i <= len; i++) {
+        output[i] = this.capitalize(output[i]);
       }
       return output.join(' ');
     },
@@ -517,9 +517,9 @@
      * @param {string} html
      */
     escape: function(html) {
-      for ( var key in entities ) {
-        if ( entities.hasOwnProperty( key ) ) {
-          html = html.replace( new RegExp(entities[key], 'ig'), key );
+      for (var key in entities) {
+        if (entities.hasOwnProperty(key)) {
+          html = html.replace(new RegExp(entities[key], 'ig'), key);
         }
       }
       return html;
@@ -531,9 +531,9 @@
      * @param {string} html
      */
     unescape: function(html) {
-      for ( var key in entities ) {
-        if ( entities.hasOwnProperty( key ) ) {
-          html = html.replace( new RegExp( key , 'ig'), entities[key] );
+      for (var key in entities) {
+        if (entities.hasOwnProperty(key)) {
+          html = html.replace(new RegExp(key, 'ig'), entities[key]);
         }
       }
       return html;
@@ -544,8 +544,8 @@
      *
      * @param {string} input
      */
-    toFloat: function( input ) {
-      return parseFloat( input );
+    toFloat: function(input) {
+      return parseFloat(input);
     },
 
     /**
@@ -553,8 +553,8 @@
      *
      * @param {string} input
      */
-    toInt: function( input ) {
-      return parseInt( input );
+    toInt: function(input) {
+      return parseInt(input);
     },
 
     /**
@@ -562,7 +562,7 @@
      *
      * @param {string} input
      */
-    toNumber: function( input ) {
+    toNumber: function(input) {
       return input * 1;
     },
     
@@ -571,8 +571,8 @@
      *
      * @param {string} input
      */
-    toBoolean: function( input ) {
-      return ( methods.toNumber( input ) === 1 ) ? true : false;
+    toBoolean: function(input) {
+      return (methods.toNumber(input) === 1) ? true : false;
     },
 
     /**
@@ -581,7 +581,7 @@
      * @param {string} input
      */
     toUppercase: function(input) {
-      return String.prototype.toUppercase.call( input );
+      return String.prototype.toUppercase.call(input);
     },
 
     /**
@@ -590,7 +590,7 @@
      * @param {string} input
      */
     toLowercase: function(input) {
-      return String.prototype.toLowercase.call( input );
+      return String.prototype.toLowercase.call(input);
     }
 
   };
@@ -603,8 +603,8 @@
    */
   var generateMethod = function(method, fn) {
 
-    Arnold.prototype[ method ] = function() {
-      if ( [undefined, null].indexOf( typeof arguments[0] ) !== -1 || arguments.length === 0 ) {
+    Arnold.prototype[method] = function() {
+      if ([undefined, null].indexOf(typeof arguments[0]) !== -1 || arguments.length === 0) {
         return undefined;
       }
       return fn.apply(methods, arguments);
@@ -613,16 +613,16 @@
   };
 
   // Goes through all available methods
-  for ( var method in methods ) {
-    if ( methods.hasOwnProperty( method ) ) {
-      generateMethod( method, methods[ method ] );
+  for (var method in methods) {
+    if (methods.hasOwnProperty(method)) {
+      generateMethod(method, methods[method]);
     }
   }
 
   // Export
-  if ( typeof module !== 'undefined' && module.exports ) {
+  if (typeof module !== 'undefined' && module.exports) {
     module.exports = new Arnold();
-  } else if ( typeof define !== 'undefined' ) {
+  } else if (typeof define !== 'undefined') {
     define(function() {
       return new Arnold();
     });

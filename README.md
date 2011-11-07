@@ -2,6 +2,13 @@
 
 Arnold is tiny JavaScript library for string manipulation. You can use it on server side as well on client side.
 
+### Features
+
+* Arnold has **no dependencies**
+* **AMD compatible**, you can load it via [RequireJS](https://github.com/jrburke/requirejs)
+* Lightweight
+* Fully **documented**
+
 ## Download
 
 To install **Arnold**, use [NPM](http://npmjs.org/).

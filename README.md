@@ -1,5 +1,7 @@
 # Arnold
 
+[![Build Status](https://secure.travis-ci.org/Baggz/Arnold.png)](http://travis-ci.org/Baggz/Arnold)
+
 Arnold is tiny JavaScript library for string manipulation. You can use it on server side as well on client side.
 
 #### Features
